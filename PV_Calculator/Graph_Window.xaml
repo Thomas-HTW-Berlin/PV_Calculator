@@ -1,0 +1,14 @@
+﻿<Window x:Class="PV_Calculator.Graph_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PV_Calculator"
+         xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+        mc:Ignorable="d"
+        Title="PV-Graph" Height="1080" Width="1920" SizeChanged="Window_SizeChanged">
+    <Grid>
+        <ScottPlot:WpfPlot x:Name="PVPlot" />
+        
+    </Grid>
+</Window>

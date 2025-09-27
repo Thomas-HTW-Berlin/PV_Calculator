@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PV_Calculator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="tilt" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
+    <Setting Name="south_angle" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="cooling_factor" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">29</Value>
+    </Setting>
+    <Setting Name="GPS_North" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">52.532</Value>
+    </Setting>
+    <Setting Name="GPS_East" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">13.392</Value>
+    </Setting>
+    <Setting Name="panel_number" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="panel_power" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="consumption" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3.5</Value>
+    </Setting>
+    <Setting Name="consumption_type" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="el_cost" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.35</Value>
+    </Setting>
+    <Setting Name="feed_in" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.08</Value>
+    </Setting>
+    <Setting Name="pv_cost" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1100</Value>
+    </Setting>
+    <Setting Name="battery_cost" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="derating_factor" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.85</Value>
+    </Setting>
+    <Setting Name="delta_T" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-0.48</Value>
+    </Setting>
+    <Setting Name="albedo" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.8</Value>
+    </Setting>
+    <Setting Name="Default_Name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Project 1</Value>
+    </Setting>
+    <Setting Name="battery_capacety" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="battery_converter_Power" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="HeatpumpConsumption" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="HeatpumpJAZ" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3.5</Value>
+    </Setting>
+    <Setting Name="Heatpumpcost" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.25</Value>
+    </Setting>
+    <Setting Name="HotWhater_Current" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.25</Value>
+    </Setting>
+    <Setting Name="Inflation" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="AverageTemp" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10.7</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

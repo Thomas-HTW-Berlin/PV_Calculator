@@ -1,0 +1,31 @@
+﻿<Window x:Class="PV_Calculator.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PV_Calculator"
+        mc:Ignorable="d"
+        Title="About" Height="450" Width="800">
+    <Grid>
+        <StackPanel >
+            <Label FontWeight="Bold" FontSize="16"> PVCalc © 2025  by Prof. Dr.-Ing. Thomas Hücker from HTW Berlin</Label>
+            <Label></Label>
+            <Label>This program is free software: you can redistribute it and/or modify it under the terms</Label>
+
+            <Label>of the GNU General Public License as published by the Free Software Foundation, </Label>
+
+            <Label>either version 3 of the License, or (at your option) any later version. </Label>
+            <Label></Label>
+            <Label>This program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY;</Label>
+
+            <Label>without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</Label>
+            <Label>See theGNU General Public License for more details.</Label>
+            <Label>You should have received a copy of the GNU General Public License along with this program.</Label>
+            <Label>If not, see: http://www.gnu.org/licenses/  </Label>
+
+
+        </StackPanel >
+
+
+    </Grid>
+</Window>

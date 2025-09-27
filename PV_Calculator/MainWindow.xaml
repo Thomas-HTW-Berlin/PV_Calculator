@@ -1,0 +1,52 @@
+﻿<Window x:Class="PV_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PV_Calculator"
+        mc:Ignorable="d"
+        Title="PV_Calculator 1.0" Height="1080" Width="1920" Icon="icon1.ico"
+        >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Name="MainMenu">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="MenueItemOpen" Header="_open" Click="MenueItemOpen_Click"/>
+                <MenuItem x:Name="MenueItemSave" Header="_save" Click="MenueItemSave_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="MenueItem_ProjectSetup" Header="New _Project" Click="MenueItem_ProjectSetup_Click"/>
+            <MenuItem Header="Show">
+                <MenuItem x:Name="MenueItemDailyProduction" Header="Daily Production"   Click="MenueItemDailyProduction_Click"/>
+                <MenuItem x:Name="MenueItemMonthlyProduction" Header="Monthly Production"   Click="MenueItemMonthlyProduction_Click"/>
+                <MenuItem x:Name="MenueItemOptimize" Header="Optimize PV Peak Power"   Click="MenueItemOptimizePeakPower_Click"/>
+                <MenuItem x:Name="MenueItemOptimizeBattery" Header="Optimize Battery capacity"   Click="MenueItemOptimizeBattery_Click"/>
+                <MenuItem x:Name="MenueItemOptimizePV_Battery" Header="Optimize PV and Battery size"   Click="MenueItemOptimizePV_Battery_Click"/>
+
+            </MenuItem>
+            
+            <MenuItem Header="Help">
+                <MenuItem x:Name="MenueItemAbout" Header="About"   Click="MenueItemAbout_Click" />
+                <MenuItem x:Name="MenueItemHelp" Header="Help"   Click="MenueItemHelp_Click" />
+
+            </MenuItem>
+       </Menu>
+
+        <Grid Grid.Row="1" Name="ContentArea">
+           <StackPanel>
+                <Label Height = "150" Margin=" 150" FontWeight="Bold" FontSize="48" Foreground="Green" HorizontalAlignment="Center">Calculate and optimise your photovoltaic power project.</Label>
+             <Label Height = "50" FontSize="24" Margin="20,0,0,0">by Prof. Dr.-Ing. Thomas Huecker</Label>
+             <Label FontSize="24" Margin="20,0,0,0">from University of Applied Science HTW-Berlin</Label>
+
+                <Button x:Name= "Start" Content="Start" Click="Start_Click" FontWeight="Bold" FontSize="20"  Background="Red" HorizontalAlignment="Center"  Width="130" Height="50" Margin="20 50 5 5 "/>
+            </StackPanel>
+        </Grid>
+
+        
+
+    </Grid>
+</Window>

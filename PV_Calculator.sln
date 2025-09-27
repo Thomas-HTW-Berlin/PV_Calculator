@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PV_Calculator", "PV_Calculator\PV_Calculator.csproj", "{B520EECE-5C76-4CF5-8237-E08F3D023C4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Debug|x64.ActiveCfg = Debug|x64
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Debug|x64.Build.0 = Debug|x64
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Release|x64.ActiveCfg = Release|x64
+		{B520EECE-5C76-4CF5-8237-E08F3D023C4A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65DA0BC2-69B7-4521-949B-68066F0F1C75}
+	EndGlobalSection
+EndGlobal

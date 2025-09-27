@@ -1,0 +1,19 @@
+﻿<Window x:Class="PV_Calculator.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PV_Calculator"
+        mc:Ignorable="d"
+        Title="HelpWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel >
+            <Label FontWeight="Bold" FontSize="16">Definitions:</Label>
+            <Label FontWeight="Bold">Levelized cost of electricity:</Label>
+            <Label>The levelized cost of electricity (LCOE) is a measure of the average net present cost of electricity generation and consumption  over 20 years.</Label>
+            <Label>It is used for investment planning and to consistently compare different methods of electricity generation.</Label>
+            <Label>"Net present cost" means that future costs are adjusted for inflation to reflect their value at the present time.</Label>
+            <Label>The lower the LCOE, the more favourable the investment in the system becomes. </Label>
+        </StackPanel >
+    </Grid>
+</Window>
