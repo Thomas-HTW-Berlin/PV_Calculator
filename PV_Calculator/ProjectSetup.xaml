@@ -50,10 +50,7 @@
             <Label Width="300" Height="30" >Orientation (0=south 180= north) :</Label>
             <TextBox Width="100" Margin="1" Name="DoubleTextSouth" Text="{Binding Default_south_angle}"/>
         </DockPanel>
-        <DockPanel  Height="20">
-            <Label Width="300" Height="30" >Average annual Temperature acc. en.climate-data.org:</Label>
-                <TextBox Width="100" Margin="1" Name="DoubleTextAverageTemp" Text="{Binding Default_AverageTemp}"/>
-        </DockPanel>
+        
             <Label Width="300" Height="30" ></Label>
 
 

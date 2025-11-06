@@ -93,5 +93,7 @@ public struct Solar_Data  // hourly data of a Year
     public double PV_Heatpump_Transfer; // price for Heatpump current; hofully a little cheaper than standart current
     public double inflation;
     public double AverageTemp;// annual average Temperature of the Town of the PV System
-    
+    public bool   Load_new_NASA_Data; // just required if GPS coordinates have changed
+
+
 }

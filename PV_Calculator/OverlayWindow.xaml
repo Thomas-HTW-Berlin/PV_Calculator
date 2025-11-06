@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="OverlayWindow" 
         WindowStyle="None" ResizeMode="NoResize" Background="Transparent"
-        AllowsTransparency="True" Topmost="True" Width="400" Height="200" WindowStartupLocation="CenterScreen">
+        AllowsTransparency="True" Topmost="True" Width="400" Height="200" WindowStartupLocation="CenterScreen" >
 
-    <Grid Background="White" Opacity="0.9">
+
+    <Grid Background="Gray" Opacity="0.8">
         <StackPanel>
             <Label Margin=" 0,20,5,20" FontWeight="Bold" FontSize="16"  HorizontalAlignment="Center"> Please wait...</Label>
                 <ProgressBar x:Name="overlayProgressBar"
@@ -18,6 +19,7 @@
                      HorizontalAlignment="Center"
                      Height="40"
                      Width="300"></ProgressBar>
+            <Label Margin=" 0,20,5,20" FontWeight="Bold" FontSize="16"  HorizontalAlignment="Center">may take 30 sec....</Label>
         </StackPanel>
     </Grid>
 </Window>

@@ -12,25 +12,11 @@ Modified from Excel calculation by Prof. Dr. Henrik te Heesen
 
 
 using Microsoft.Win32;
-using ScottPlot;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Markup;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 using Path = System.IO.Path;
 
 namespace PV_Calculator
@@ -43,7 +29,7 @@ namespace PV_Calculator
    
 
 
-    public partial class MainWindow : Window
+    public partial class MainWindow : System.Windows.Window
     {
         // public int d = 0;
         public Solar_Data Data;// contains all hourly data of a Project
@@ -79,19 +65,7 @@ namespace PV_Calculator
             Data.peak_power = 1;
             Data.albedo = 0.2;
             Data.calc_ok = false;
-
-
-
-            /*ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/c subst X: \"C:\\Users\\tomhu\\Documents\\Visual Studio 2019\\Projects\"";
-            //startInfo.Verb = "runas";
-
-            Process.Start(startInfo);*/
-
-
-
+            Data.Load_new_NASA_Data = true;
 
 
         }
@@ -174,7 +148,7 @@ namespace PV_Calculator
                 op_Window.Left = this.Left;
                 op_Window.Width = this.Width;
                 op_Window.Height = ContentArea.ActualHeight;
-                op_Window.Show();
+                if(Data.calc_ok == true) op_Window.Show();
             }
             else MessageBox.Show(" No Project setup or loaded yet");
 
@@ -194,7 +168,7 @@ namespace PV_Calculator
                 PV_Window.Left = this.Left;
                 PV_Window.Width = this.Width;
                 PV_Window.Height = ContentArea.ActualHeight;
-                PV_Window.Show();
+                if (Data.calc_ok == true) PV_Window.Show();
             }
             else MessageBox.Show(" No Project setup or loaded yet");
 
@@ -223,8 +197,8 @@ namespace PV_Calculator
                 value[i] =  nom_Power *4/20*i+1;
                 Data.peak_power = value[i];
                 Project_Calculation p = new Project_Calculation(ref Data);
-
-                double PV_Bat_cost = Data.pv_cost * Data.peak_power+ Data.battery_capacity * Data.battery_cost;
+                    
+                    double PV_Bat_cost = Data.pv_cost * Data.peak_power+ Data.battery_capacity * Data.battery_cost;
                 double gridconsumption_Heatpump = (Data.Annual_Heatpower_consumption + Data.Annual_WhaterHeatpower_consumption) / Data.JAZ*1000 - Data.PV_Heatpump_Transfer;
                 double gridconsumption_el = Data.grid_consumption - gridconsumption_Heatpump;
 
@@ -251,7 +225,7 @@ namespace PV_Calculator
                 PV_Window.Left = this.Left;
                 PV_Window.Width = this.Width;
                 PV_Window.Height = ContentArea.ActualHeight;
-                PV_Window.Show();
+                if(Data.calc_ok == true) PV_Window.Show();
                 
                 
                 Data.peak_power=nom_Power; // and write old value back
@@ -319,7 +293,7 @@ namespace PV_Calculator
                 PV_Window.Left = this.Left;
                 PV_Window.Width = this.Width;
                 PV_Window.Height = ContentArea.ActualHeight;
-                PV_Window.Show();
+                if (Data.calc_ok == true) PV_Window.Show();
                 
                 Data.battery_capacity = Bat_Cap; // and write old value back
                 Data.Battery_power=Bat_Pow; // store during optimization
@@ -352,7 +326,7 @@ namespace PV_Calculator
             PV_Window.Left = this.Left;
             PV_Window.Width = this.Width;
             PV_Window.Height = ContentArea.ActualHeight;
-            PV_Window.Show();
+                if (Data.calc_ok == true) PV_Window.Show();
 
             
 
@@ -562,7 +536,15 @@ namespace PV_Calculator
         public void Update_Data(ref Solar_Data pv)
         {
             Data = pv;
+            OverlayWindow overlayWindow = new OverlayWindow
+            {
+                Owner = this // Set the owner to the main window
+            };
+           
+             overlayWindow.Show();
             Project_Calculation p = new Project_Calculation(ref  Data);
+            overlayWindow.Close();
+
             Data.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             //MenueItemDailyProduction_Click(object sender, RoutedEventArgs e)
             MenueItemDailyProduction_Click(MenueItemDailyProduction, new RoutedEventArgs());

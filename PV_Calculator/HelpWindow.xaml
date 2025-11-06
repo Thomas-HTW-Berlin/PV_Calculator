@@ -14,6 +14,17 @@
             <Label>It is used for investment planning and to consistently compare different methods of electricity generation.</Label>
             <Label>"Net present cost" means that future costs are adjusted for inflation to reflect their value at the present time.</Label>
             <Label>The lower the LCOE, the more favourable the investment in the system becomes. </Label>
+            <Label></Label>
+            <Label>Irradiance and weather data are live donloaded from https://power.larc.nasa.gov/</Label>
+            <Label>Data are based on choosen GPS location and year 2024  </Label>
+            <Label></Label>
+            <Label>Load profiles for houses and heatpump are based on VDI 4655 :</Label>
+            <Label>Reference load profiles of residential buildings for power, heat and domestic hot water</Label>
+            <Label>as well as reference generation profiles for photovoltaic plants</Label>
+
+
+
+
         </StackPanel >
     </Grid>
 </Window>

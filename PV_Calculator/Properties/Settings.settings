@@ -48,9 +48,9 @@
       <Value Profile="(Default)">-0.48</Value>
     </Setting>
     <Setting Name="albedo" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">0.8</Value>
+      <Value Profile="(Default)">0.2</Value>
     </Setting>
-    <Setting Name="Default_Name" Type="System.String" Scope="User">
+    <Setting Name="Default_Name" Type="System.string" Scope="User">
       <Value Profile="(Default)">Project 1</Value>
     </Setting>
     <Setting Name="battery_capacety" Type="System.Double" Scope="User">

@@ -1,22 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Globalization;
-using System.Windows.Markup;
-using System.Windows.Controls.Primitives;
-using System.Net.Security;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using String = System.String;
 
 namespace PV_Calculator
 {
@@ -27,10 +14,11 @@ namespace PV_Calculator
     {
         Solar_Data data;
         MainWindow _mainWindow;
+
+        public String Default_south_angle { get; set; } = ""; //
         public String Default_tilt { get; set; } = ""; // 
-        public String Default_south_angle { get; set; } = ""; // 
         public String Default_cooling_factor { get; set; } = ""; // 
-        public String Default_gps_north { get; set; }= ""; // 
+        public String Default_gps_north { get; set; } = ""; // 
         public String Default_gps_east { get; set; } = ""; // 
         public String Default_panel_number { get; set; } = ""; // 
         public String Default_panel_power { get; set; } = ""; // 
@@ -173,9 +161,17 @@ namespace PV_Calculator
 
         private void SaveButton_Checked_1(object sender, RoutedEventArgs e)
         {
+            double gps_E, gps_N = 0;
             data.tilt=read_double(DoubleTextTilt.Text);
-            data.gps_east = read_double(DoubleTextGpsEast.Text);
-            data.gps_north = read_double(DoubleTextGpsNorth.Text);
+            gps_E = read_double(DoubleTextGpsEast.Text);
+            gps_N = read_double(DoubleTextGpsNorth.Text);
+            if(gps_N == data.gps_north && gps_E==data.gps_east && data.calc_ok==true)
+                data.Load_new_NASA_Data = false;
+            else 
+                data.Load_new_NASA_Data = true;
+
+            data.gps_east = gps_E;
+            data.gps_north = gps_N;
             data.panel_number = read_double(DoubleTextNumber.Text);
             data.panel_power = read_double(DoubleTextPower.Text);
             data.peak_power = data.panel_number * data.panel_power/1000;
@@ -198,7 +194,7 @@ namespace PV_Calculator
             data.JAZ= read_double(DoubleTextHeatpumpJAZ.Text); // 
             data.el_cost_heatpump=read_double(DoubleTextCost_HeatpumpCurrent.Text); // 
             data.Annual_WhaterHeatpower_consumption= read_double(DoubleTextCost_HotWaterCurrent.Text); // 
-            data.AverageTemp = read_double(DoubleTextAverageTemp.Text);
+           // data.AverageTemp = read_double(DoubleTextAverageTemp.Text);
 
 
 
@@ -235,7 +231,7 @@ namespace PV_Calculator
            Properties.Settings.Default.Save();
             Properties.Settings.Default.Reload(); // einmalk neu laden damit sie aktiv werden
             _mainWindow.EnableMenu();
-
+            data.calc_ok = true;
             _mainWindow.Update_Data(ref data);
 
             Close();
@@ -246,7 +242,7 @@ namespace PV_Calculator
             RadioButton radioButton = sender as RadioButton;
             if (radioButton != null)
             {
-                string Text = $"{radioButton.Content}";
+                String Text = $"{radioButton.Content}";
 
                 switch (Text)
                 {
@@ -275,7 +271,7 @@ namespace PV_Calculator
             RadioButton loadButton = sender as RadioButton;
             if( loadButton != null)
             {
-                string Text = $"{loadButton.Content}";
+                String Text = $"{loadButton.Content}";
 
                 switch (Text)
                 {
@@ -355,7 +351,7 @@ namespace PV_Calculator
         }
 
 
-        private double read_double(string text)
+        private double read_double(String text)
         {
             double d = -9E127;
 

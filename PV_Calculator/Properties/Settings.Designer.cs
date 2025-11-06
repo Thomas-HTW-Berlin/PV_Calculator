@@ -205,7 +205,7 @@ namespace PV_Calculator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.8")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.2")]
         public double albedo {
             get {
                 return ((double)(this["albedo"]));
