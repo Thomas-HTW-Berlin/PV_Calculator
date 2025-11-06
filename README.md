@@ -1,4 +1,5 @@
 Dont use this Branche any more. Pleas use Branche: With-data-From-NASA-power-Larc-Sever
+
 This is the First version of a Windows c# program that calculates a solar PV system with battery. Several loads from heat pump to industry profiles are included. Peak power and battery can be opimized for lowes cost (LCOE) You need Scottplot Nuget Pakage. This allows you to Zoom all Graphs interactive.
 
 PVCalc © 2025  by Prof. Dr.-Ing. Thomas Hücker from HTW Berlin
